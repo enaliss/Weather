@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Weather Explorer</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="searchOverlay" class="search-overlay">
+        <div class="retro-window search-window">
+            <div class="title-bar">
+                <div class="title-text">WEATHER_FINDER.EXE</div>
+                <div class="window-controls">
+                    <div class="control-circle yellow"></div>
+                    <div class="control-circle blue"></div>
+                    <div class="control-circle pink"></div>
+                </div>
+            </div>
+            <div class="window-content search-content">
+                <p style="font-size: 28px; margin-bottom: 10px;">ENTER CITY NAME:</p>
+                <input type="text" id="cityInput" placeholder="London, Tokyo, Seoul..." autofocus>
+                <button id="searchBtn">SEARCH</button>
+                <p id="searchStatus" style="font-size: 18px; margin-top: 10px; color: #4a4a4a;"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="weatherContainer" style="display: none;">
+        <div class="retro-window">
+            <div class="title-bar">
+                <div class="title-text" id="cityTitle">CITY.EXE</div>
+                <div class="window-controls">
+                    <div class="control-circle yellow"></div>
+                    <div class="control-circle blue"></div>
+                    <div class="control-circle pink"></div>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="weather-text-group top-stats">
+                    <p class="description" id="weatherDescription">Loading...</p>
+                    <p class="stat">Humidity: <span id="humidity">--%</span></p>
+                </div>
+                
+                <div class="main-stats-group">
+                    <h1 class="temp" id="currentTemp">--°C</h1>
+                    <img id="weatherIcon" class="weather-icon" src="" alt="Weather Icon">
+                </div>
+
+                <div class="weather-text-group bottom-stats">
+                    <div class="forecast">
+                        <p>Tomorrow: <span id="tomorrowDesc">--</span></p>
+                    </div>
+                    <div class="recommendation">
+                        <p id="recommendationText">Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center;">
+            <button id="backBtn" class="retro-btn-small">[ BACK TO SEARCH ]</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
