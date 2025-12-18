@@ -14,7 +14,7 @@ function getWeatherIconUrl(code, temp) {
     else if (temp > -2 && temp <= 2) iconName = "COLD.png";
     else if (temp >= 3 && temp <= 7) iconName = "COOL.png";
     else if (temp >= 8 && temp <= 12) iconName = "FRESH_SPRING.png";
-    else if (temp >= 13 && temp <= 18) iconName = "COMFORTABLE.PNG";
+    else if (temp >= 13 && temp <= 18) iconName = "COMFORTABLE.png";
     else if (temp >= 19 && temp <= 24) iconName = "WARM.PNG";
     else if (temp >= 25 && temp <= 28) iconName = "GETTING_HOT.png";
     else if (temp >= 29 && temp <= 32) iconName = "HOT.png";
@@ -93,3 +93,4 @@ document.getElementById('backBtn').addEventListener('click', () => {
     document.getElementById('cityInput').value = '';
 
 });
+
