@@ -14,8 +14,8 @@ function getWeatherIconUrl(code, temp) {
     else if (temp > -2 && temp <= 2) iconName = "COLD.png";
     else if (temp >= 3 && temp <= 7) iconName = "COOL.png";
     else if (temp >= 8 && temp <= 12) iconName = "FRESH_SPRING.png";
-    else if (temp >= 13 && temp <= 18) iconName = "COMFORTABLE.png";
-    else if (temp >= 19 && temp <= 24) iconName = "WARM.png";
+    else if (temp >= 13 && temp <= 18) iconName = "COMFORTABLE.PNG";
+    else if (temp >= 19 && temp <= 24) iconName = "WARM.PNG";
     else if (temp >= 25 && temp <= 28) iconName = "GETTING_HOT.png";
     else if (temp >= 29 && temp <= 32) iconName = "HOT.png";
     else if (temp >= 33 && temp <= 35) iconName = "VERY_HOT.png";
@@ -23,9 +23,9 @@ function getWeatherIconUrl(code, temp) {
     else iconName = "VERY_HOT.png";
 
     if (code >= 51) {
-        if (code >= 71 && code <= 77) iconName = "SNOW_CONDITION.png"; 
-        else if (code >= 95) iconName = "THUNDERSTORM.png";
-        else iconName = "RAIN_CONDITION.png";
+        if (code >= 71 && code <= 77) iconName = "SNOW_CONDITION.PNG"; 
+        else if (code >= 95) iconName = "THUNDERSTORM.PNG";
+        else iconName = "RAIN_CONDITION.PNG";
     }
     return `icons/${iconName}`;
 }
@@ -91,4 +91,5 @@ document.getElementById('backBtn').addEventListener('click', () => {
     document.getElementById('searchOverlay').style.display = 'flex';
     document.getElementById('weatherContainer').style.display = 'none';
     document.getElementById('cityInput').value = '';
+
 });
